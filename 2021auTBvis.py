@@ -4,10 +4,8 @@ import matplotlib.pyplot as plt
 import japanize_matplotlib
 import streamlit as st
 import plotly.express as px
-from modules import dataset_function
+from modules import dataset_function as ds_func
 
-
-df = dataset_function.import_tb_dataset("SIR51015.csv")
-
+df = ds_func.import_tb_dataset("SIR51015.csv")
 
 st.write(df.head(3))
