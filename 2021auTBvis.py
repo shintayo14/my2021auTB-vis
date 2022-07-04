@@ -16,8 +16,6 @@ df['order_id'] = df['order_id'].apply(lambda x: str(x) if type(x) != str else x)
 df['projectNameID'] = df['project_id'].str.cat(df['project_name'], sep='_')
 
 
-# df['受渡日'] = df['受渡日'].apply(lambda x: str(x) if type(x) != str else x)
-
 from pandas.api.types import infer_dtype
 st.write(df.apply(infer_dtype))
 
